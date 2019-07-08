@@ -1,0 +1,1 @@
+sci-slacker>=0.0.1
