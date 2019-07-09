@@ -1,0 +1,1 @@
+{"type": "completed", "expr_name": "Deeper Transformer IWSLT origin 2-layer", "start_at": 1562692476.7606564, "end_at": 1562698346.7472835, "message": "*BLEU*\nAverage Checkpoint: `35.58`\nBest Checkpoint: `35.26`"}
