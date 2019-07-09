@@ -1,9 +1,11 @@
+import unittest
+
 import os
 import json
 import slacker
 
-token = os.environ['SLACK_TOKEN']
-channel = os.environ['SLACK_CHANNEL']
+TOKEN = os.environ['SLACK_TOKEN']
+CHANNEL = os.environ['SLACK_CHANNEL']
 
 
 def send_completed_msg(status):
@@ -13,12 +15,12 @@ def send_completed_msg(status):
     message_builder.set_end_time(status['end_at'])
     blocks = message_builder.create_message(status['message'])
 
-    sender = slacker.Sender(token, channel)
+    sender = slacker.Sender(TOKEN, CHANNEL)
     response = sender.send(blocks)
     assert response['ok'], 'Sending failed'
 
 
-def main():
+def send():
     path = 'status-payload'
     filenames = os.listdir(path)
     num_files = len(filenames)
@@ -41,7 +43,8 @@ def main():
     send_fn[status['type']](status)
 
 
-if __name__ == '__main__':
-    branch = os.environ.get('TRAVIS_BRANCH', '<local>')
-    if branch != 'master':
-        main()
+class SlackSendTest(unittest.TestCase):
+    def testSendStatus(self):
+        branch = os.environ.get('TRAVIS_BRANCH', '<local>')
+        if branch != 'master':
+            send()
