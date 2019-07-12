@@ -1,0 +1,1 @@
+{"type": "completed", "expr_name": "Transformer base IWSLT, seed=2, num_layers=12", "start_at": 1562956775.1132884, "end_at": 1562963119.7795684, "message": "*BLEU*\nAverage Checkpoint: `35.70`\nBest Checkpoint: `35.45`"}
