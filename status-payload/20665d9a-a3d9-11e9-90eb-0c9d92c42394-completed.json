@@ -1,0 +1,1 @@
+{"type": "completed", "expr_name": "Transformer Big WMT, seed=1", "start_at": 1562848855.8322213, "end_at": 1562956449.2997813, "message": "*BLEU*\nAverage Checkpoint: `29.28`\nBest Checkpoint: `28.83`"}
