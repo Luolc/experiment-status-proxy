@@ -1,0 +1,1 @@
+{"type": "completed", "expr_name": "Bottleneck Transformer IWSLT, seed=1", "start_at": 1563035859.8776102, "end_at": 1563046020.776888, "message": "*BLEU*\nAverage Checkpoint: `32.57`\nBest Checkpoint: `32.01`"}
